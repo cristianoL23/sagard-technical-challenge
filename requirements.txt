@@ -1,0 +1,10 @@
+pandas
+pdfplumber
+pydantic
+python-dotenv
+typer
+rich
+openai
+pytest
+jupyter
+matplotlib
