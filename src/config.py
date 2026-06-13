@@ -3,6 +3,10 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 PERIOD_PATTERNS = [
     r"Q([1-4])[_\s-]+(20\d{2})",
     r"(20\d{2})[_\s-]+Q([1-4])",

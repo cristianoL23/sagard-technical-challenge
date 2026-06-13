@@ -1,7 +1,6 @@
 from pathlib import Path
 
 import typer
-from dotenv import load_dotenv
 from rich import print
 
 from src.company_identity import validate_company_identity
@@ -12,8 +11,6 @@ from src.models import ExtractionError
 from src.output import write_outputs, write_raw_metrics
 from src.parse_pdf import parse_pdf_local
 from src.validate import route_extractions
-
-load_dotenv()
 
 app = typer.Typer()
 
