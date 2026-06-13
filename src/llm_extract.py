@@ -23,12 +23,18 @@ Only extract metrics explicitly present in the text. Do not infer missing metric
 USER_PROMPT_TEMPLATE = """You are extracting portfolio company metrics from PDF text.
 
 This PDF belongs to portfolio company "{company_short_name}" ({company_full_name}).
-Use this validated identity for every record:
+Use this validated identity as defaults for company fields:
 - company_short_name: {company_short_name}
 - company_full_name: {company_full_name}
-- year: {year}
-- quarter: {quarter}
+- year: {year} (primary reporting year)
+- quarter: {quarter} (primary reporting quarter)
 - period_type: {period_type}
+
+Many PDFs include side-by-side quarter comparison tables with multiple period columns
+(e.g. "Q2 2025" and "Q1 2025"). Extract metrics for EVERY quarter column present in the
+text, not only the primary period above. For each value, set year and quarter to match
+the column header that value came from. Emit a separate JSON object per (metric, quarter)
+pair — do not combine values from different quarters into one record.
 
 Only extract metrics explicitly present in the text. Do not infer missing metrics.
 Include cash metrics when present. Labels such as "Cash & Equivalents", "Cash Balance",
@@ -52,9 +58,11 @@ Output format:
   - currency (string such as "USD" or null)
   - source_page (integer or null)
   - confidence (number from 0 to 1)
-  - raw_text (string; exact supporting substring from the PDF)
+  - raw_text (string; exact supporting substring from the PDF — for multi-quarter table
+    rows, use the full row text including all column values, e.g.
+    "Contracted ARR $16.9M $15.2M", not a reconstructed single-column string)
 
-Example output:
+Example output (multi-quarter table):
 [
   {{
     "company_short_name": "NovaCloud",
@@ -71,7 +79,24 @@ Example output:
     "currency": "USD",
     "source_page": 1,
     "confidence": 0.95,
-    "raw_text": "Recognized Revenue $8.4M"
+    "raw_text": "Recognized Revenue $8.4M $7.9M"
+  }},
+  {{
+    "company_short_name": "NovaCloud",
+    "company_full_name": "NovaCloud Analytics Inc.",
+    "year": 2025,
+    "quarter": "Q1",
+    "period_type": "quarter",
+    "report_date": null,
+    "metric_name": "revenue",
+    "metric_label": "Recognized Revenue",
+    "value": 7.9,
+    "unit": "currency",
+    "scale": "millions",
+    "currency": "USD",
+    "source_page": 1,
+    "confidence": 0.95,
+    "raw_text": "Recognized Revenue $7.9M $7.6M"
   }}
 ]
 

@@ -116,6 +116,103 @@ def test_extract_metrics_with_llm_parses_cash_from_raw_text():
     assert rows[0].scale == "millions"
 
 
+def test_extract_metrics_with_llm_preserves_multi_quarter_rows():
+    parsed = ParsedDocument(
+        source_file="CarbonTrack_Q2_2025.pdf",
+        pages=[
+            ParsedPage(
+                page_number=1,
+                text=(
+                    "CarbonTrack Analytics Corp.\n"
+                    "Recognized Revenue $4.1M $3.8M\n"
+                    "Gross Margin 73% 72%"
+                ),
+                tables=[],
+            )
+        ],
+        full_text=(
+            "CarbonTrack Analytics Corp.\n"
+            "Recognized Revenue $4.1M $3.8M\n"
+            "Gross Margin 73% 72%"
+        ),
+    )
+    identity = CompanyIdentity(
+        company_short_name="CarbonTrack",
+        company_full_name="CarbonTrack Analytics Corp.",
+        year=2025,
+        quarter="Q2",
+        period_type="quarter",
+        source_file="CarbonTrack_Q2_2025.pdf",
+    )
+
+    llm_payload = [
+        {
+            "metric_name": "revenue",
+            "metric_label": "Recognized Revenue",
+            "year": 2025,
+            "quarter": "Q2",
+            "period_type": "quarter",
+            "value": 4.1,
+            "unit": "currency",
+            "scale": "millions",
+            "confidence": 0.95,
+            "raw_text": "Recognized Revenue $4.1M",
+            "source_page": 1,
+        },
+        {
+            "metric_name": "revenue",
+            "metric_label": "Recognized Revenue",
+            "year": 2025,
+            "quarter": "Q1",
+            "period_type": "quarter",
+            "value": 3.8,
+            "unit": "currency",
+            "scale": "millions",
+            "confidence": 0.95,
+            "raw_text": "Recognized Revenue $3.8M",
+            "source_page": 1,
+        },
+        {
+            "metric_name": "gross_margin",
+            "metric_label": "Gross Margin",
+            "year": 2025,
+            "quarter": "Q2",
+            "period_type": "quarter",
+            "value": 73.0,
+            "unit": "percentage",
+            "scale": "unknown",
+            "confidence": 0.95,
+            "raw_text": "Gross Margin 73%",
+            "source_page": 1,
+        },
+        {
+            "metric_name": "gross_margin",
+            "metric_label": "Gross Margin",
+            "year": 2025,
+            "quarter": "Q1",
+            "period_type": "quarter",
+            "value": 72.0,
+            "unit": "percentage",
+            "scale": "unknown",
+            "confidence": 0.95,
+            "raw_text": "Gross Margin 72%",
+            "source_page": 1,
+        },
+    ]
+
+    with patch("src.llm_extract.extract_with_llm", return_value=llm_payload):
+        rows = extract_metrics_with_llm(parsed, identity)
+
+    assert len(rows) == 4
+    quarters_by_metric = {
+        (row.metric_name, row.quarter): row.value for row in rows
+    }
+    assert quarters_by_metric[("revenue", "Q2")] == 4.1
+    assert quarters_by_metric[("revenue", "Q1")] == 3.8
+    assert quarters_by_metric[("gross_margin", "Q2")] == 73.0
+    assert quarters_by_metric[("gross_margin", "Q1")] == 72.0
+
+
 def test_extract_metrics_with_llm_handles_invalid_json():
     parsed = ParsedDocument(
         source_file="NovaCloud_Q2_2025.pdf",
