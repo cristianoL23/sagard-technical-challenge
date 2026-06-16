@@ -1,2 +1,1 @@
 company_short_name,company_full_name,report_date,year,quarter,period_type,metric_name,metric_label,value,unit,scale,currency,source_file,source_page,confidence,raw_text,status,error_message
-FleetLink,FleetLink Logistics Network,,2025,Q1,quarter,headcount,Headcount,199.0,count,ones,,FleetLink_Q1_2025.pdf,1,0.95,the team ended the quarter at 199 employees,missing_source_text,No supporting source text provided
