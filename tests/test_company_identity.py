@@ -3,6 +3,7 @@ import pytest
 from src.company_identity import (
     detect_document_currency,
     infer_period,
+    normalize_company_short_name,
     validate_company_identity,
 )
 from src.models import IdentityCandidate, ParsedDocument, ParsedPage
@@ -117,6 +118,12 @@ def test_validate_company_identity_rejects_period_mismatch():
     )
     candidate = _sample_candidate(year=2024, quarter="Q1")
     assert validate_company_identity(candidate, parsed, "NovaCloud_Q2_2025.pdf") is None
+
+
+def test_normalize_company_short_name_maps_fleetlink_rebrand():
+    assert normalize_company_short_name("FleetLink") == "Apex Freight"
+    assert normalize_company_short_name("Apex Freight") == "Apex Freight"
+    assert normalize_company_short_name("NovaCloud") == "NovaCloud"
 
 
 @pytest.mark.parametrize(
