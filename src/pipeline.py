@@ -1,18 +1,28 @@
 from pathlib import Path
+from typing import TypeVar
 
 import typer
 from rich import print
 
-from src.company_identity import validate_company_identity
+from src.company_identity import normalize_company_short_name, validate_company_identity
 from src.config import CONFIDENCE_THRESHOLD, INPUT_PDF_DIR, OPENAI_API_KEY, OUTPUT_DIR
 from src.llm_extract import extract_metrics_with_llm
 from src.llm_identity import build_identity_candidate, extract_identity_with_llm
-from src.models import ExtractionError
+from src.models import ExtractionError, ExtractedMetric
 from src.output import write_outputs, write_raw_metrics
 from src.parse_pdf import parse_pdf_local
 from src.validate import route_extractions
 
 app = typer.Typer()
+
+RecordWithCompany = TypeVar("RecordWithCompany", ExtractedMetric, ExtractionError)
+
+
+def _normalize_company_fields(record: RecordWithCompany) -> RecordWithCompany:
+    normalized = normalize_company_short_name(record.company_short_name)
+    if normalized == record.company_short_name:
+        return record
+    return record.model_copy(update={"company_short_name": normalized})
 
 
 @app.callback()
@@ -88,18 +98,20 @@ def run(
         except Exception as exc:
             print(f"[yellow]Warning: LLM extraction failed for {pdf_path.name}: {exc}[/yellow]")
             all_rejected.append(
-                ExtractionError(
-                    company_short_name=identity.company_short_name,
-                    company_full_name=identity.company_full_name,
-                    year=identity.year,
-                    quarter=identity.quarter,
-                    period_type=identity.period_type,
-                    metric_name="other",
-                    metric_label="",
-                    source_file=parsed.source_file,
-                    confidence=0.0,
-                    status="llm_parse_error",
-                    error_message=str(exc),
+                _normalize_company_fields(
+                    ExtractionError(
+                        company_short_name=identity.company_short_name,
+                        company_full_name=identity.company_full_name,
+                        year=identity.year,
+                        quarter=identity.quarter,
+                        period_type=identity.period_type,
+                        metric_name="other",
+                        metric_label="",
+                        source_file=parsed.source_file,
+                        confidence=0.0,
+                        status="llm_parse_error",
+                        error_message=str(exc),
+                    )
                 )
             )
             continue
@@ -110,8 +122,8 @@ def run(
             confidence_threshold,
             source_text=parsed.full_text,
         )
-        all_accepted.extend(accepted)
-        all_rejected.extend(rejected)
+        all_accepted.extend(_normalize_company_fields(m) for m in accepted)
+        all_rejected.extend(_normalize_company_fields(m) for m in rejected)
 
         print(
             f"  Extracted candidates: {len(candidates)} | "

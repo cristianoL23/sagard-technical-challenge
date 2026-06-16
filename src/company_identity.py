@@ -1,7 +1,7 @@
 import re
 from typing import Optional
 
-from src.config import CONFIDENCE_THRESHOLD, PERIOD_PATTERNS
+from src.config import COMPANY_ALIASES, CONFIDENCE_THRESHOLD, PERIOD_PATTERNS
 from src.llm_identity import to_company_identity
 from src.models import CompanyIdentity, IdentityCandidate, ParsedDocument, PeriodType
 
@@ -19,6 +19,12 @@ def _parse_period_from_text(text: str) -> Optional[tuple[int, str]]:
                 quarter_num, year = int(groups[0]), int(groups[1])
             return year, f"Q{quarter_num}"
     return None
+
+
+def normalize_company_short_name(short_name: str) -> str:
+    """Map former portfolio names to the current canonical short name."""
+    key = short_name.strip().lower()
+    return COMPANY_ALIASES.get(key, short_name.strip())
 
 
 def infer_period(

@@ -30,6 +30,11 @@ CANONICAL_METRICS = [
     "other",
 ]
 
+# Former portfolio names mapped to the current short name after a rebrand.
+COMPANY_ALIASES = {
+    "fleetlink": "Apex Freight",
+}
+
 METRIC_ALIASES = {
     "recognized revenue": "revenue",
     "quarterly revenue": "revenue",
