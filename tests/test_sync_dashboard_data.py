@@ -28,5 +28,11 @@ def test_sync_dashboard_data_copies_json():
         target = (DASHBOARD_DATA_DIR / name).read_text(encoding="utf-8")
         assert source == target
 
+    assert (DASHBOARD_DATA_DIR / "human_rejected.json").exists()
+
     metrics = json.loads((DASHBOARD_DATA_DIR / "metrics.json").read_text(encoding="utf-8"))
     assert len(metrics) > 0
+
+    pdfs_dir = REPO_ROOT / "dashboard" / "public" / "pdfs"
+    assert pdfs_dir.exists()
+    assert any(pdfs_dir.glob("*.pdf"))

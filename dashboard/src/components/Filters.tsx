@@ -12,6 +12,7 @@ type Props = {
   filters: FilterState;
   options: Options;
   onChange: (filters: FilterState) => void;
+  embedded?: boolean;
 };
 
 function SelectField({
@@ -40,33 +41,41 @@ function SelectField({
   );
 }
 
-export function Filters({ filters, options, onChange }: Props) {
+export function Filters({ filters, options, onChange, embedded = false }: Props) {
   const set = (key: keyof FilterState, value: string) =>
     onChange({ ...filters, [key]: value });
+
+  const fields = (
+    <div className="filters-grid">
+      <SelectField
+        label="Company"
+        value={filters.company}
+        options={options.companies}
+        onChange={(v) => set("company", v)}
+      />
+      <SelectField
+        label="Year"
+        value={filters.year}
+        options={options.years}
+        onChange={(v) => set("year", v)}
+      />
+      <SelectField
+        label="Quarter"
+        value={filters.quarter}
+        options={options.quarters}
+        onChange={(v) => set("quarter", v)}
+      />
+    </div>
+  );
+
+  if (embedded) {
+    return <div className="filters-embedded">{fields}</div>;
+  }
 
   return (
     <section className="filters">
       <h2>Filters</h2>
-      <div className="filters-grid">
-        <SelectField
-          label="Company"
-          value={filters.company}
-          options={options.companies}
-          onChange={(v) => set("company", v)}
-        />
-        <SelectField
-          label="Year"
-          value={filters.year}
-          options={options.years}
-          onChange={(v) => set("year", v)}
-        />
-        <SelectField
-          label="Quarter"
-          value={filters.quarter}
-          options={options.quarters}
-          onChange={(v) => set("quarter", v)}
-        />
-      </div>
+      {fields}
     </section>
   );
 }

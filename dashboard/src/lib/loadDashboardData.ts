@@ -1,16 +1,29 @@
-import type { ExtractionErrorRecord, MetricRecord } from "@/types";
+import { withRecordIds } from "@/lib/recordId";
+import type {
+  ExtractionErrorRecord,
+  HumanRejectedRecord,
+  MetricRecord,
+  ReviewRecord,
+} from "@/types";
 
 export async function loadDashboardData(): Promise<{
   metrics: MetricRecord[];
-  errors: ExtractionErrorRecord[];
+  pendingReview: ReviewRecord[];
+  humanRejected: HumanRejectedRecord[];
 }> {
-  const [metricsRes, errorsRes] = await Promise.all([
+  const [metricsRes, pendingRes, rejectedRes] = await Promise.all([
     fetch("/data/metrics.json"),
     fetch("/data/extraction_errors.json"),
+    fetch("/data/human_rejected.json"),
   ]);
 
   const metrics = (await metricsRes.json()) as MetricRecord[];
-  const errors = (await errorsRes.json()) as ExtractionErrorRecord[];
+  const pendingReview = withRecordIds(
+    (await pendingRes.json()) as ExtractionErrorRecord[]
+  ) as ReviewRecord[];
+  const humanRejected = withRecordIds(
+    (await rejectedRes.json()) as HumanRejectedRecord[]
+  ) as HumanRejectedRecord[];
 
-  return { metrics, errors };
+  return { metrics, pendingReview, humanRejected };
 }

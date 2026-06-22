@@ -1,30 +1,38 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
-import { CompanyMetricView } from "@/components/CompanyMetricView";
-import { ErrorRowsTable } from "@/components/ErrorRowsTable";
-import { Filters } from "@/components/Filters";
-import { MetricSummaryCards } from "@/components/MetricSummaryCards";
+import { MetricsToReview } from "@/components/MetricsToReview";
+import { PortfolioOverview } from "@/components/PortfolioOverview";
+import { RejectedRecords } from "@/components/RejectedRecords";
+import { TrendCharts } from "@/components/TrendCharts";
 import { MetricsTable } from "@/components/MetricsTable";
-import { EMPTY_FILTERS, applyFilters, filterOptions } from "@/lib/filters";
+import { DEFAULT_FILTERS, applyFilters, filterOptions } from "@/lib/filters";
 import { loadDashboardData } from "@/lib/loadDashboardData";
-import type { ExtractionErrorRecord, FilterState, MetricRecord } from "@/types";
+import type {
+  FilterState,
+  HumanRejectedRecord,
+  MetricRecord,
+  ReviewRecord,
+} from "@/types";
 
 export default function HomePage() {
   const [metrics, setMetrics] = useState<MetricRecord[]>([]);
-  const [errors, setErrors] = useState<ExtractionErrorRecord[]>([]);
-  const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
+  const [pendingReview, setPendingReview] = useState<ReviewRecord[]>([]);
+  const [humanRejected, setHumanRejected] = useState<HumanRejectedRecord[]>([]);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadDashboardData()
-      .then(({ metrics: m, errors: e }) => {
-        setMetrics(m);
-        setErrors(e);
-      })
-      .finally(() => setLoading(false));
+  const reloadData = useCallback(async () => {
+    const data = await loadDashboardData();
+    setMetrics(data.metrics);
+    setPendingReview(data.pendingReview);
+    setHumanRejected(data.humanRejected);
   }, []);
+
+  useEffect(() => {
+    reloadData().finally(() => setLoading(false));
+  }, [reloadData]);
 
   const filteredMetrics = useMemo(
     () => applyFilters(metrics, filters),
@@ -42,18 +50,21 @@ export default function HomePage() {
       <header>
         <h1>Portfolio Metrics Dashboard</h1>
         <p>
-          {metrics.length} accepted metrics · {errors.length} rejected records
+          {metrics.length} accepted · {pendingReview.length} to review ·{" "}
+          {humanRejected.length} rejected
         </p>
       </header>
 
-      <Filters filters={filters} options={options} onChange={setFilters} />
-      <MetricSummaryCards metrics={filteredMetrics} />
-      <MetricsTable metrics={filteredMetrics} />
-      <CompanyMetricView
-        metrics={filteredMetrics}
-        selectedCompany={filters.company}
+      <PortfolioOverview
+        allMetrics={metrics}
+        filters={filters}
+        filterOptions={options}
+        onFiltersChange={setFilters}
       />
-      <ErrorRowsTable errors={errors} />
+      <MetricsToReview records={pendingReview} onReviewComplete={reloadData} />
+      <TrendCharts allMetrics={metrics} companyFilter={filters.company} />
+      <MetricsTable metrics={filteredMetrics} />
+      <RejectedRecords records={humanRejected} />
     </main>
   );
 }

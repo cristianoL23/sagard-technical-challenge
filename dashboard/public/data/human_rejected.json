@@ -1,0 +1,23 @@
+[
+  {
+    "company_short_name": "NovaCloud",
+    "company_full_name": "NovaCloud Analytics Inc.",
+    "report_date": null,
+    "year": 2025,
+    "quarter": "Q2",
+    "period_type": "quarter",
+    "metric_name": "revenue",
+    "metric_label": "Professional Services Revenue",
+    "value": 12.5,
+    "unit": "currency",
+    "scale": "millions",
+    "currency": "USD",
+    "source_file": "NovaCloud_Q2_2025.pdf",
+    "source_page": 2,
+    "confidence": 0.88,
+    "raw_text": "Professional Services Revenue $12.5M",
+    "status": "missing_source_text",
+    "error_message": "No supporting source text provided",
+    "review_decision": "human_rejected"
+  }
+]

@@ -3,6 +3,7 @@ export type UnitType = "currency" | "percentage" | "count" | "multiple" | "unkno
 export type ScaleType = "ones" | "thousands" | "millions" | "billions" | "unknown";
 
 export type MetricRecord = {
+  id?: string;
   company_short_name: string;
   company_full_name?: string | null;
   report_date?: string | null;
@@ -32,8 +33,15 @@ export type ExtractionErrorRecord = MetricRecord & {
   error_message?: string | null;
 };
 
-export const NO_EXTRACTION_ERRORS_MESSAGE =
-  "No rejected records. Dashboard data was seeded from legacy regex extraction output, which did not produce an errors file.";
+export type HumanRejectedRecord = ExtractionErrorRecord & {
+  review_decision: "human_rejected";
+};
+
+export const NO_PENDING_REVIEW_MESSAGE =
+  "No metrics pending review. Pipeline-rejected records appear here for human approval.";
+
+export const NO_HUMAN_REJECTED_MESSAGE =
+  "No human-rejected records. Metrics explicitly rejected during review appear here.";
 
 export const CARD_METRICS = [
   "revenue",
@@ -49,3 +57,5 @@ export type FilterState = {
   year: string;
   quarter: string;
 };
+
+export type ReviewRecord = ExtractionErrorRecord & { id: string };

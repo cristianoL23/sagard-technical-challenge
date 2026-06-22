@@ -1,9 +1,9 @@
 import type { FilterState, MetricRecord } from "@/types";
 
-export const EMPTY_FILTERS: FilterState = {
+export const DEFAULT_FILTERS: FilterState = {
   company: "",
-  year: "",
-  quarter: "",
+  year: "2025",
+  quarter: "Q2",
 };
 
 export function applyFilters(metrics: MetricRecord[], filters: FilterState): MetricRecord[] {
