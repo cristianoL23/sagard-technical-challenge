@@ -1,6 +1,6 @@
-import { selectPortfolioOverviewRows } from "@/lib/filters";
+import { excludePendingReviewMetrics, meetsConfidenceThreshold, selectPortfolioOverviewRows } from "@/lib/filters";
 import { CARD_METRICS } from "@/types";
-import type { FilterState, MetricRecord } from "@/types";
+import type { ExtractionErrorRecord, FilterState, MetricRecord } from "@/types";
 
 export type OverviewMetricKey = (typeof CARD_METRICS)[number];
 
@@ -40,14 +40,18 @@ export function getMetricRow(
 
 export function buildCompanyOverviewRows(
   allMetrics: MetricRecord[],
-  filters: FilterState
+  filters: FilterState,
+  pendingReview: ExtractionErrorRecord[] = []
 ): CompanyOverviewRow[] {
   const year = filters.year ? Number(filters.year) : null;
   const quarter = filters.quarter || null;
+  const overviewMetrics = excludePendingReviewMetrics(allMetrics, pendingReview).filter(
+    meetsConfidenceThreshold
+  );
 
   const companies = [
     ...new Set(
-      allMetrics
+      overviewMetrics
         .filter((m) => {
           if (filters.company && m.company_short_name !== filters.company) return false;
           if (year != null && m.year !== year) return false;
@@ -63,7 +67,7 @@ export function buildCompanyOverviewRows(
 
     if (year != null && quarter) {
       for (const { key } of OVERVIEW_TABLE_METRICS) {
-        const current = getMetricRow(allMetrics, company, year, quarter, key);
+        const current = getMetricRow(overviewMetrics, company, year, quarter, key);
         if (current) {
           metrics[key] = current;
         }

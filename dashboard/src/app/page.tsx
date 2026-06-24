@@ -57,6 +57,7 @@ export default function HomePage() {
 
       <PortfolioOverview
         allMetrics={metrics}
+        pendingReview={pendingReview}
         filters={filters}
         filterOptions={options}
         onFiltersChange={setFilters}

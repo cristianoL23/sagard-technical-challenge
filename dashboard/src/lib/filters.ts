@@ -1,10 +1,25 @@
-import type { FilterState, MetricRecord } from "@/types";
+import { buildRecordId } from "@/lib/recordId";
+import type { ExtractionErrorRecord, FilterState, MetricRecord } from "@/types";
 
 export const DEFAULT_FILTERS: FilterState = {
   company: "",
   year: "2025",
   quarter: "Q2",
 };
+
+export const CONFIDENCE_THRESHOLD = 0.5;
+
+export function meetsConfidenceThreshold(metric: MetricRecord): boolean {
+  return metric.confidence >= CONFIDENCE_THRESHOLD;
+}
+
+export function excludePendingReviewMetrics(
+  metrics: MetricRecord[],
+  pendingReview: ExtractionErrorRecord[]
+): MetricRecord[] {
+  const pendingIds = new Set(pendingReview.map((record) => buildRecordId(record)));
+  return metrics.filter((metric) => !pendingIds.has(buildRecordId(metric)));
+}
 
 export function applyFilters(metrics: MetricRecord[], filters: FilterState): MetricRecord[] {
   return metrics.filter((m) => {

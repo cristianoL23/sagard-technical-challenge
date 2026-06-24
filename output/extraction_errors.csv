@@ -1,1 +1,2 @@
 company_short_name,company_full_name,report_date,year,quarter,period_type,metric_name,metric_label,value,unit,scale,currency,source_file,source_page,confidence,raw_text,status,error_message
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,headcount,Headcount,114.0,count,ones,,MediSight_Q1_2025.pdf,1,0.95,the company ended the period with 114 employees,missing_source_text,No supporting source text provided

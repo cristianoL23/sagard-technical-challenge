@@ -8,7 +8,7 @@ import {
   type OverviewMetricKey,
 } from "@/lib/portfolioOverview";
 import { formatMetricValue } from "@/lib/formatMetricValue";
-import type { FilterState, MetricRecord } from "@/types";
+import type { ExtractionErrorRecord, FilterState, MetricRecord } from "@/types";
 
 type FilterOptions = {
   companies: string[];
@@ -18,6 +18,7 @@ type FilterOptions = {
 
 type Props = {
   allMetrics: MetricRecord[];
+  pendingReview: ExtractionErrorRecord[];
   filters: FilterState;
   filterOptions: FilterOptions;
   onFiltersChange: (filters: FilterState) => void;
@@ -39,6 +40,7 @@ function MetricCell({
 
 export function PortfolioOverview({
   allMetrics,
+  pendingReview,
   filters,
   filterOptions,
   onFiltersChange,
@@ -48,7 +50,7 @@ export function PortfolioOverview({
       ? `${filters.quarter} ${filters.year}`
       : filters.year || "All periods";
 
-  const rows = buildCompanyOverviewRows(allMetrics, filters);
+  const rows = buildCompanyOverviewRows(allMetrics, filters, pendingReview);
 
   return (
     <section className="portfolio-overview">

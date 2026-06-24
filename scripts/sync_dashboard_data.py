@@ -13,6 +13,48 @@ DASHBOARD_DATA_DIR = REPO_ROOT / "dashboard" / "public" / "data"
 DASHBOARD_PDF_DIR = REPO_ROOT / "dashboard" / "public" / "pdfs"
 
 JSON_FILES = ("metrics.json", "extraction_errors.json")
+REQUIRED_REVIEW_EXAMPLES = (
+    {
+        "company_short_name": "PeopleFlow",
+        "company_full_name": "PeopleFlow HR Systems Ltd.",
+        "report_date": None,
+        "year": 2025,
+        "quarter": "Q2",
+        "period_type": "quarter",
+        "metric_name": "revenue",
+        "metric_label": "Quarterly Revenue",
+        "value": 5.1,
+        "unit": "currency",
+        "scale": "millions",
+        "currency": "GBP",
+        "source_file": "PeopleFlow_Q2_2025.pdf",
+        "source_page": 1,
+        "confidence": 0.42,
+        "raw_text": "Quarterly Revenue 5.1M",
+        "status": "low_confidence",
+        "error_message": "Confidence below acceptance threshold",
+    },
+    {
+        "company_short_name": "NovaCloud",
+        "company_full_name": "NovaCloud Analytics Inc.",
+        "report_date": None,
+        "year": 2025,
+        "quarter": "Q2",
+        "period_type": "quarter",
+        "metric_name": "revenue",
+        "metric_label": "Professional Services Revenue",
+        "value": 12.5,
+        "unit": "currency",
+        "scale": "millions",
+        "currency": "USD",
+        "source_file": "NovaCloud_Q2_2025.pdf",
+        "source_page": 2,
+        "confidence": 0.88,
+        "raw_text": "Professional Services Revenue $12.5M",
+        "status": "missing_source_text",
+        "error_message": "No supporting source text provided",
+    },
+)
 
 
 def _load_json(path: Path) -> list:
@@ -29,6 +71,66 @@ def _collect_source_files(*datasets: list) -> set[str]:
             if source_file:
                 files.add(source_file)
     return files
+
+
+def _build_record_id(record: dict) -> str:
+    parts = "|".join(
+        [
+            record.get("source_file") or "",
+            record.get("metric_name") or "",
+            record.get("metric_label") or "",
+            record.get("raw_text") or "",
+            str(record.get("value") if record.get("value") is not None else ""),
+        ]
+    )
+    hash_value = 2166136261
+    for char in parts:
+        hash_value ^= ord(char)
+        hash_value = (hash_value * 16777619) & 0xFFFFFFFF
+    return format(hash_value, "08x")
+
+
+def _write_json(path: Path, payload: list) -> None:
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def _ensure_review_examples(errors: list[dict]) -> tuple[list[dict], int]:
+    by_id = {_build_record_id(row) for row in errors}
+    added = 0
+    next_errors = list(errors)
+    for example in REQUIRED_REVIEW_EXAMPLES:
+        example_id = _build_record_id(example)
+        if example_id in by_id:
+            continue
+        next_errors.append(example)
+        by_id.add(example_id)
+        added += 1
+    return next_errors, added
+
+
+def _sync_human_rejected(pending_errors: list[dict]) -> list[dict]:
+    human_rejected_output = OUTPUT_DIR / "human_rejected.json"
+    human_rejected_dashboard = DASHBOARD_DATA_DIR / "human_rejected.json"
+
+    if human_rejected_output.exists():
+        source_records = _load_json(human_rejected_output)
+        print(
+            f"Loaded {human_rejected_output.relative_to(REPO_ROOT)} "
+            f"({len(source_records)} record(s))"
+        )
+    else:
+        source_records = _load_json(human_rejected_dashboard)
+
+    pending_ids = {_build_record_id(row) for row in pending_errors}
+    synced_human_rejected = [
+        row for row in source_records if _build_record_id(row) not in pending_ids
+    ]
+    _write_json(human_rejected_dashboard, synced_human_rejected)
+    print(
+        f"Wrote {human_rejected_dashboard.relative_to(REPO_ROOT)} "
+        f"({len(synced_human_rejected)} record(s))"
+    )
+    return synced_human_rejected
 
 
 def _sync_pdfs(source_files: set[str]) -> None:
@@ -70,21 +172,17 @@ def main() -> None:
         shutil.copy2(source, target)
         print(f"Copied {source.relative_to(REPO_ROOT)} -> {target.relative_to(REPO_ROOT)}")
 
-    human_rejected_output = OUTPUT_DIR / "human_rejected.json"
-    human_rejected_dashboard = DASHBOARD_DATA_DIR / "human_rejected.json"
-    if human_rejected_output.exists():
-        shutil.copy2(human_rejected_output, human_rejected_dashboard)
-        print(
-            f"Copied {human_rejected_output.relative_to(REPO_ROOT)} -> "
-            f"{human_rejected_dashboard.relative_to(REPO_ROOT)}"
-        )
-    elif not human_rejected_dashboard.exists():
-        human_rejected_dashboard.write_text("[]\n", encoding="utf-8")
-        print(f"Initialized {human_rejected_dashboard.relative_to(REPO_ROOT)}")
-
     metrics = _load_json(OUTPUT_DIR / "metrics.json")
-    errors = _load_json(OUTPUT_DIR / "extraction_errors.json")
-    human_rejected = _load_json(human_rejected_dashboard)
+    errors = _load_json(DASHBOARD_DATA_DIR / "extraction_errors.json")
+    errors, examples_added = _ensure_review_examples(errors)
+    _write_json(DASHBOARD_DATA_DIR / "extraction_errors.json", errors)
+    if examples_added:
+        print(
+            "Added required review example(s) to dashboard extraction errors: "
+            f"{examples_added}"
+        )
+
+    human_rejected = _sync_human_rejected(errors)
     source_files = _collect_source_files(metrics, errors, human_rejected)
     _sync_pdfs(source_files)
 

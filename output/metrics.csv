@@ -1,14 +1,16 @@
 company_short_name,company_full_name,report_date,year,quarter,period_type,metric_name,metric_label,value,unit,scale,currency,source_file,source_page,confidence,raw_text
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,Total Recognized Revenue,9.3,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,Total Recognized Revenue 9.3M
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,Recognized Revenue (transaction),8.6,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,Recognized Revenue (transaction) 8.6M
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,SaaS Tool Fee Revenue,0.7,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,SaaS Tool Fee Revenue 0.7M
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,54.0,percentage,ones,,ApexFreight_Q2_2025.pdf,1,0.95,Gross Margin 54%
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,headcount,Total Headcount,204.0,count,ones,,ApexFreight_Q2_2025.pdf,1,0.95,Total Headcount 204
 Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Completed Shipments,1.28,count,millions,,ApexFreight_Q2_2025.pdf,1,0.95,Completed Shipments 1.28M
 Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Active Shippers,3460.0,count,ones,,ApexFreight_Q2_2025.pdf,1,0.95,"Active Shippers 3,460"
 Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Active Carriers,7900.0,count,ones,,ApexFreight_Q2_2025.pdf,1,0.95,"Active Carriers 7,900"
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,On-Time Delivery Rate,96.1,percentage,ones,,ApexFreight_Q2_2025.pdf,1,0.95,On-Time Delivery Rate 96.1%
-Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Average Take Rate,11.2,percentage,ones,,ApexFreight_Q2_2025.pdf,1,0.95,Average Take Rate 11.2%
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,On-Time Delivery Rate,96.1,percentage,unknown,,ApexFreight_Q2_2025.pdf,1,0.95,On-Time Delivery Rate 96.1%
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Average Take Rate,11.2,percentage,unknown,,ApexFreight_Q2_2025.pdf,1,0.95,Average Take Rate 11.2%
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,Recognized Revenue (transaction),8.6,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,Recognized Revenue (transaction) 8.6M
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,SaaS Tool Fee Revenue,0.7,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,SaaS Tool Fee Revenue 0.7M
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,revenue,Total Recognized Revenue,9.3,currency,millions,USD,ApexFreight_Q2_2025.pdf,1,0.95,Total Recognized Revenue 9.3M
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,54.0,percentage,unknown,,ApexFreight_Q2_2025.pdf,1,0.95,Gross Margin 54%
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,Marketing Spend as % of Revenue,16.0,percentage,unknown,,ApexFreight_Q2_2025.pdf,1,0.95,Marketing Spend as % of Revenue 16%
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,other,"Support Tickets / 1,000 Shipments",14.3,count,unknown,,ApexFreight_Q2_2025.pdf,1,0.95,"Support Tickets / 1,000 Shipments 14.3"
+Apex Freight,Apex Freight Solutions Inc.,,2025,Q2,quarter,headcount,Total Headcount,204.0,count,ones,,ApexFreight_Q2_2025.pdf,1,0.95,Total Headcount 204
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q2,quarter,arr,Contracted ARR,16.9,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Contracted ARR $16.9M $15.2M
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q1,quarter,arr,Contracted ARR,15.2,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Contracted ARR $16.9M $15.2M
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q2,quarter,revenue,Recognized Revenue,4.1,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Recognized Revenue $4.1M $3.8M
@@ -27,12 +29,14 @@ CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q2,quarter,monthly_burn,Monthly Ne
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q1,quarter,monthly_burn,Monthly Net Burn,-0.61,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Monthly Net Burn ($0.55M) ($0.61M)
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q2,quarter,cash_balance,Cash Balance,13.8,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Cash Balance $13.8M $14.8M
 CarbonTrack,CarbonTrack Analytics Corp.,,2025,Q1,quarter,cash_balance,Cash Balance,14.8,currency,millions,USD,CarbonTrack_Q2_2025.pdf,1,0.95,Cash Balance $13.8M $14.8M
-ClearPay,ClearPay Technologies Ltd.,,2025,Q2,quarter,cash_balance,Cash & Restricted Cash,38.4,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Cash & Restricted Cash $38.4M $40.1M
-ClearPay,ClearPay Technologies Ltd.,,2025,Q1,quarter,cash_balance,Cash & Restricted Cash,40.1,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Cash & Restricted Cash $38.4M $40.1M
 ClearPay,ClearPay Technologies Ltd.,,2025,Q2,quarter,revenue,Total Recognized Revenue,17.3,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Total Recognized Revenue $17.3M $16.1M
 ClearPay,ClearPay Technologies Ltd.,,2025,Q1,quarter,revenue,Total Recognized Revenue,16.1,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Total Recognized Revenue $17.3M $16.1M
+ClearPay,ClearPay Technologies Ltd.,,2025,Q2,quarter,cash_balance,Cash & Restricted Cash,38.4,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Cash & Restricted Cash $38.4M $40.1M
+ClearPay,ClearPay Technologies Ltd.,,2025,Q1,quarter,cash_balance,Cash & Restricted Cash,40.1,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Cash & Restricted Cash $38.4M $40.1M
 ClearPay,ClearPay Technologies Ltd.,,2025,Q2,quarter,headcount,Total Headcount,211.0,count,ones,,ClearPay_Q2_2025.pdf,1,0.95,Total Headcount 211 203
 ClearPay,ClearPay Technologies Ltd.,,2025,Q1,quarter,headcount,Total Headcount,203.0,count,ones,,ClearPay_Q2_2025.pdf,1,0.95,Total Headcount 211 203
+ClearPay,ClearPay Technologies Ltd.,,2025,Q2,quarter,arr,Net Revenue (take-rate based),14.8,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Net Revenue (take-rate based) $14.8M $13.5M
+ClearPay,ClearPay Technologies Ltd.,,2025,Q1,quarter,arr,Net Revenue (take-rate based),13.5,currency,millions,USD,ClearPay_Q2_2025.pdf,1,0.95,Net Revenue (take-rate based) $14.8M $13.5M
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q2,quarter,arr,Annual Recurring Revenue,18.6,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Annual Recurring Revenue $18.6M $17.1M
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q1,quarter,arr,Annual Recurring Revenue,17.1,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Annual Recurring Revenue $18.6M $17.1M
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q2,quarter,revenue,Quarterly Recognized Revenue,4.5,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Quarterly Recognized Revenue $4.5M $4.2M
@@ -51,71 +55,84 @@ ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q2,quarter,cash_balance,Cash & Equi
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q1,quarter,cash_balance,Cash & Equivalents,12.1,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Cash & Equivalents $11.2M $12.1M
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q2,quarter,monthly_burn,Quarterly Net Burn,-0.91,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Quarterly Net Burn ($0.91M) ($0.97M)
 ConstructIQ,ConstructIQ Solutions Inc.,,2025,Q1,quarter,monthly_burn,Quarterly Net Burn,-0.97,currency,millions,USD,ConstructIQ_Q2_2025.pdf,1,0.95,Quarterly Net Burn ($0.91M) ($0.97M)
-Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,enterprise_logos,Completed Shipments,1170000.0,count,ones,,FleetLink_Q1_2025.pdf,1,0.95,Completed Shipments 1.17M
+Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,enterprise_logos,Completed Shipments,1.17,count,millions,,FleetLink_Q1_2025.pdf,1,0.95,Completed Shipments 1.17M
 Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,paying_entities,Active Shippers,3310.0,count,ones,,FleetLink_Q1_2025.pdf,1,0.95,"Active Shippers 3,310"
 Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,paying_entities,Active Carriers,7550.0,count,ones,,FleetLink_Q1_2025.pdf,1,0.95,"Active Carriers 7,550"
 Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,revenue,Gross Transaction Revenue,8.9,currency,millions,USD,FleetLink_Q1_2025.pdf,1,0.95,Gross Transaction Revenue 8.9M
-Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,gross_margin,Gross Margin,52.0,percentage,ones,,FleetLink_Q1_2025.pdf,1,0.95,Gross Margin 52%
-Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,Contribution Margin / Shipment,2.19,currency,ones,USD,FleetLink_Q1_2025.pdf,1,0.95,Contribution Margin / Shipment $2.19
-Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,Marketing Spend as % of Revenue,17.0,percentage,ones,,FleetLink_Q1_2025.pdf,1,0.95,Marketing Spend as % of Revenue 17%
-Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,"Support Tickets / 1,000 Shipments",14.9,multiple,ones,,FleetLink_Q1_2025.pdf,1,0.95,"Support Tickets / 1,000 Shipments 14.9"
+Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,gross_margin,Gross Margin,52.0,percentage,unknown,,FleetLink_Q1_2025.pdf,1,0.95,Gross Margin 52%
+Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,Contribution Margin / Shipment,2.19,currency,unknown,USD,FleetLink_Q1_2025.pdf,1,0.95,Contribution Margin / Shipment $2.19
+Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,Marketing Spend as % of Revenue,17.0,percentage,unknown,,FleetLink_Q1_2025.pdf,1,0.95,Marketing Spend as % of Revenue 17%
+Apex Freight,FleetLink Logistics Network,,2025,Q1,quarter,other,"Support Tickets / 1,000 Shipments",14.9,count,unknown,,FleetLink_Q1_2025.pdf,1,0.95,"Support Tickets / 1,000 Shipments 14.9"
 Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,revenue,Platform Revenue (recognized),9.0,currency,millions,USD,FleetLink_Q4_2024.pdf,1,0.95,Platform Revenue (recognized) 9.0M
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,gross_margin,Gross Margin,51.0,percentage,ones,,FleetLink_Q4_2024.pdf,1,0.95,Gross Margin 51%
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,headcount,Total Headcount,196.0,count,ones,,FleetLink_Q4_2024.pdf,1,0.95,Total Headcount 196
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Completed Shipments,1.07,count,millions,,FleetLink_Q4_2024.pdf,1,0.95,Completed Shipments 1.07M
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Active Shippers,3180.0,count,ones,,FleetLink_Q4_2024.pdf,1,0.95,"Active Shippers 3,180"
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Active Carriers,7210.0,count,ones,,FleetLink_Q4_2024.pdf,1,0.95,"Active Carriers 7,210"
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,On-Time Delivery Rate,94.6,percentage,ones,,FleetLink_Q4_2024.pdf,1,0.95,On-Time Delivery Rate 94.6%
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Average Take Rate,10.8,percentage,ones,,FleetLink_Q4_2024.pdf,1,0.95,Average Take Rate 10.8%
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Marketing Spend as % of Revenue,18.0,percentage,ones,,FleetLink_Q4_2024.pdf,1,0.95,Marketing Spend as % of Revenue 18%
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,"Support Tickets / 1,000 Shipments",15.8,count,ones,,FleetLink_Q4_2024.pdf,1,0.95,"Support Tickets / 1,000 Shipments 15.8"
-Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Contribution Margin / Shipment,2.1,currency,ones,USD,FleetLink_Q4_2024.pdf,1,0.95,Contribution Margin / Shipment $2.10
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,gross_margin,Gross Margin,51.0,percentage,unknown,,FleetLink_Q4_2024.pdf,1,0.95,Gross Margin 51%
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,headcount,Total Headcount,196.0,count,unknown,,FleetLink_Q4_2024.pdf,1,0.95,Total Headcount 196
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,On-Time Delivery Rate,94.6,percentage,unknown,,FleetLink_Q4_2024.pdf,1,0.95,On-Time Delivery Rate 94.6%
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Average Take Rate,10.8,percentage,unknown,,FleetLink_Q4_2024.pdf,1,0.95,Average Take Rate 10.8%
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Contribution Margin / Shipment,2.1,currency,unknown,USD,FleetLink_Q4_2024.pdf,1,0.95,Contribution Margin / Shipment $2.10
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Marketing Spend as % of Revenue,18.0,percentage,unknown,,FleetLink_Q4_2024.pdf,1,0.95,Marketing Spend as % of Revenue 18%
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,"Support Tickets / 1,000 Shipments",15.8,count,unknown,,FleetLink_Q4_2024.pdf,1,0.95,"Support Tickets / 1,000 Shipments 15.8"
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Completed Shipments,1070000.0,count,unknown,,FleetLink_Q4_2024.pdf,1,0.95,Completed Shipments 1.07M
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Active Shippers,3180.0,count,unknown,,FleetLink_Q4_2024.pdf,1,0.95,"Active Shippers 3,180"
+Apex Freight,FleetLink Logistics Network,,2024,Q4,quarter,other,Active Carriers,7210.0,count,unknown,,FleetLink_Q4_2024.pdf,1,0.95,"Active Carriers 7,210"
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,revenue,Recognized Revenue,12.1,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Recognized Revenue $12.1M
+LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Interest Expense,-3.2,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Interest Expense ($3.2M)
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,net_retention,Net Interest Margin,9.3,percentage,ones,,LendBridge_Q1_2025.pdf,1,0.95,Net Interest Margin 9.3%
-LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,revenue,Fee & Ancillary Income,1.0,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Fee & Ancillary Income $1.0M
+LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Fee & Ancillary Income,1.0,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Fee & Ancillary Income $1.0M
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,gross_margin,Gross Margin,61.0,percentage,ones,,LendBridge_Q1_2025.pdf,1,0.95,Gross Margin 61%
-LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,arr,Total Loan Book (gross),302.0,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Total Loan Book (gross) $302M
+LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Total Loan Book (gross),302.0,currency,millions,USD,LendBridge_Q1_2025.pdf,1,0.95,Total Loan Book (gross) $302M
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,paying_entities,Active Borrowers,1380.0,count,ones,,LendBridge_Q1_2025.pdf,1,0.95,"Active Borrowers 1,380"
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Average Loan Size,81.0,currency,thousands,USD,LendBridge_Q1_2025.pdf,1,0.95,Average Loan Size $81k
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Credit Loss Rate (LTM),3.3,percentage,ones,,LendBridge_Q1_2025.pdf,1,0.95,Credit Loss Rate (LTM) 3.3%
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,other,Balance Sheet Leverage,2.8,multiple,ones,,LendBridge_Q1_2025.pdf,1,0.95,Balance Sheet Leverage 2.8x
 LendBridge,LendBridge Capital Corp.,,2025,Q1,quarter,headcount,Total Headcount,182.0,count,ones,,LendBridge_Q1_2025.pdf,1,0.95,Total Headcount 182
 LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,revenue,Recognized Revenue,10.1,currency,millions,USD,LendBridge_Q2_2024.pdf,1,0.95,Recognized Revenue $10.1M
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,cash_balance,Total Loan Book (gross),258.0,currency,millions,USD,LendBridge_Q2_2024.pdf,1,0.95,Total Loan Book (gross) $258M
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,headcount,Total Headcount,162.0,count,ones,,LendBridge_Q2_2024.pdf,1,0.95,Total Headcount 162
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,gross_margin,Gross Margin,58.0,percentage,unknown,,LendBridge_Q2_2024.pdf,1,0.95,Gross Margin 58%
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,monthly_burn,Net Interest Margin,8.6,percentage,unknown,,LendBridge_Q2_2024.pdf,1,0.95,Net Interest Margin 8.6%
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Pre-Provision Operating Margin,29.0,percentage,unknown,,LendBridge_Q2_2024.pdf,1,0.95,Pre-Provision Operating Margin 29%
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,cash_balance,Interest Expense,-2.9,currency,millions,USD,LendBridge_Q2_2024.pdf,1,0.95,Interest Expense ($2.9M)
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,gross_margin,Gross Margin,58.0,percentage,ones,,LendBridge_Q2_2024.pdf,1,0.95,Gross Margin 58%
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,arr,Fee & Other Income,0.7,currency,millions,USD,LendBridge_Q2_2024.pdf,1,0.95,Fee & Other Income $0.7M
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Total Loan Book (gross),258.0,currency,millions,USD,LendBridge_Q2_2024.pdf,1,0.95,Total Loan Book (gross) $258M
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Active Borrowers,1180.0,count,ones,,LendBridge_Q2_2024.pdf,1,0.95,"Active Borrowers 1,180"
 LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Average Loan Size,72.0,currency,thousands,USD,LendBridge_Q2_2024.pdf,1,0.95,Average Loan Size $72k
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,paying_entities,Active Borrowers,1180.0,count,ones,,LendBridge_Q2_2024.pdf,1,0.95,"Active Borrowers 1,180"
-LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Net Charge-off Rate,4.2,percentage,unknown,,LendBridge_Q2_2024.pdf,1,0.95,Net Charge-off Rate (LTM) 4.2%
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Net Charge-off Rate (LTM),4.2,percentage,ones,,LendBridge_Q2_2024.pdf,1,0.95,Net Charge-off Rate (LTM) 4.2%
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Balance Sheet Leverage,2.8,multiple,ones,,LendBridge_Q2_2024.pdf,1,0.95,Balance Sheet Leverage 2.8x
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,other,Senior Covenant Headroom,140.0,unknown,ones,,LendBridge_Q2_2024.pdf,1,0.95,Senior Covenant Headroom +140bps
+LendBridge,LendBridge Capital Corp.,,2024,Q2,quarter,headcount,Total Headcount,162.0,count,ones,,LendBridge_Q2_2024.pdf,1,0.95,Total Headcount 162
 LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,revenue,Recognized Revenue,12.7,currency,millions,USD,LendBridge_Q2_2025.pdf,1,0.95,Recognized Revenue $12.7M
-LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,cash_balance,Net Interest Margin,9.4,percentage,unknown,,LendBridge_Q2_2025.pdf,1,0.95,Net Interest Margin 9.4%
-LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,cash_balance,Provision Coverage Ratio,2.4,multiple,unknown,,LendBridge_Q2_2025.pdf,1,0.95,Provision Coverage Ratio 2.4x
-LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,cash_balance,Total Loan Book (gross),316.0,currency,millions,USD,LendBridge_Q2_2025.pdf,1,0.95,Total Loan Book (gross) $316M
-LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,headcount,Total Headcount,188.0,count,unknown,,LendBridge_Q2_2025.pdf,1,0.95,Total Headcount 188
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,cash_balance,Non-cash fair value adjustment on warrant portfolio,0.6,currency,millions,USD,LendBridge_Q2_2025.pdf,1,0.95,Non-cash fair value adjustment on warrant portfolio: +$0.6M
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,cash_balance,One-time legal settlement expense accrual,-0.3,currency,millions,USD,LendBridge_Q2_2025.pdf,1,0.95,One-time legal settlement expense accrual: ($0.3M)
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,headcount,Total Headcount,188.0,count,ones,,LendBridge_Q2_2025.pdf,1,0.95,Total Headcount 188
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,arr,Average Loan Size,84.0,currency,thousands,USD,LendBridge_Q2_2025.pdf,1,0.95,Average Loan Size $84k
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,arr,Total Loan Book (gross),316.0,currency,millions,USD,LendBridge_Q2_2025.pdf,1,0.95,Total Loan Book (gross) $316M
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,net_retention,Net Charge-off Rate (LTM),3.1,percentage,ones,,LendBridge_Q2_2025.pdf,1,0.95,Net Charge-off Rate (LTM) 3.1%
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,gross_margin,Gross Margin,62.0,percentage,ones,,LendBridge_Q2_2025.pdf,1,0.95,Gross Margin 62%
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,gross_margin,Pre-Provision Operating Margin,34.0,percentage,ones,,LendBridge_Q2_2025.pdf,1,0.95,Pre-Provision Operating Margin 34%
+LendBridge,LendBridge Capital Corp.,,2025,Q2,quarter,other,Provision Coverage Ratio,2.4,multiple,ones,,LendBridge_Q2_2025.pdf,1,0.95,Provision Coverage Ratio 2.4x
 LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,revenue,Recognized Revenue,10.8,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Recognized Revenue $10.8M
-LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,cash_balance,Total Loan Book (gross),274.0,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Total Loan Book (gross) $274M
-LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,headcount,Total Headcount,169.0,count,ones,,LendBridge_Q3_2024.pdf,1,0.95,Total Headcount 169
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,other,Interest Expense,-3.0,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Interest Expense ($3.0M)
 LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,gross_margin,Gross Margin,59.0,percentage,unknown,,LendBridge_Q3_2024.pdf,1,0.95,Gross Margin 59%
-LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,monthly_burn,Interest Expense,-3.0,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Interest Expense ($3.0M)
-LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,arr,Net Interest Margin,8.9,percentage,unknown,,LendBridge_Q3_2024.pdf,1,0.95,Net Interest Margin 8.9%
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,other,Fee & Ancillary Income,0.8,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Fee & Ancillary Income $0.8M
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,other,Total Loan Book (gross),274.0,currency,millions,USD,LendBridge_Q3_2024.pdf,1,0.95,Total Loan Book (gross) $274M
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,paying_entities,Active Borrowers,1250.0,count,unknown,,LendBridge_Q3_2024.pdf,1,0.95,"Active Borrowers 1,250"
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,other,Average Loan Size,75.0,currency,thousands,USD,LendBridge_Q3_2024.pdf,1,0.95,Average Loan Size $75k
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,net_retention,Net Charge-off Rate (LTM),3.9,percentage,unknown,,LendBridge_Q3_2024.pdf,1,0.95,Net Charge-off Rate (LTM) 3.9%
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,other,Balance Sheet Leverage,2.9,multiple,unknown,,LendBridge_Q3_2024.pdf,1,0.95,Balance Sheet Leverage 2.9x
+LendBridge,LendBridge Capital Corp.,,2024,Q3,quarter,headcount,Total Headcount,169.0,count,unknown,,LendBridge_Q3_2024.pdf,1,0.95,Total Headcount 169
 LendBridge,LendBridge Capital Corp.,,2024,Q4,quarter,revenue,Recognized Revenue,11.4,currency,millions,USD,LendBridge_Q4_2024.pdf,1,0.95,Recognized Revenue $11.4M
 LendBridge,LendBridge Capital Corp.,,2024,Q4,quarter,cash_balance,Total Loan Book (gross),291.0,currency,millions,USD,LendBridge_Q4_2024.pdf,1,0.95,Total Loan Book (gross) $291M
 LendBridge,LendBridge Capital Corp.,,2024,Q4,quarter,headcount,Total Headcount,175.0,count,ones,,LendBridge_Q4_2024.pdf,1,0.95,Total Headcount 175
-LendBridge,LendBridge Capital Corp.,,2024,Q4,quarter,monthly_burn,Interest Expense,3.1,currency,millions,USD,LendBridge_Q4_2024.pdf,1,0.95,Interest Expense ($3.1M)
 MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,revenue,Recognized Revenue,6.3,currency,millions,USD,MediSight_Q1_2025.pdf,1,0.95,Recognized Revenue 6.3M
-MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,gross_margin,Gross Margin,76.0,percentage,unknown,,MediSight_Q1_2025.pdf,1,0.95,Gross Margin 76%
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,gross_margin,Gross Margin,76.0,percentage,ones,,MediSight_Q1_2025.pdf,1,0.95,Gross Margin 76%
 MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,arr,Contracted Annual Recurring Revenue,26.1,currency,millions,USD,MediSight_Q1_2025.pdf,1,0.95,Contracted Annual Recurring Revenue 26.1M
-MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,gross_retention,ARR from Existing Accounts,85.0,percentage,unknown,,MediSight_Q1_2025.pdf,1,0.95,ARR from Existing Accounts 85%
-MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,headcount,Headcount,114.0,count,unknown,,MediSight_Q1_2025.pdf,1,0.95,Headcount of 114
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,arr,ARR Growth (YoY),34.0,percentage,ones,,MediSight_Q1_2025.pdf,1,0.95,ARR Growth (YoY) 34%
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,arr,ARR from Existing Accounts,85.0,percentage,ones,,MediSight_Q1_2025.pdf,1,0.95,ARR from Existing Accounts 85%
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,other,Avg. Remaining Contract Term,3.2,count,ones,,MediSight_Q1_2025.pdf,1,0.95,Avg. Remaining Contract Term 3.2 years
+MediSight,MediSight Data Platform Inc.,,2025,Q1,quarter,other,Capitalized development costs,0.5,currency,millions,USD,MediSight_Q1_2025.pdf,1,0.95,Capitalized development costs in the period: 0.5M
 MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,revenue,Recognized Revenue,6.8,currency,millions,USD,MediSight_Q2_2025.pdf,1,0.95,Recognized Revenue 6.8M
-MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,77.0,percentage,ones,,MediSight_Q2_2025.pdf,1,0.95,Gross Margin 77%
+MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,77.0,percentage,unknown,,MediSight_Q2_2025.pdf,1,0.95,Gross Margin 77%
 MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,arr,Contracted ARR (end of period),27.9,currency,millions,USD,MediSight_Q2_2025.pdf,1,0.95,Contracted ARR (end of period) 27.9M
-MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,arr,ARR Growth (YoY),31.0,percentage,ones,,MediSight_Q2_2025.pdf,1,0.95,ARR Growth (YoY) 31%
-MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,arr,Expansion ARR as % of Total ARR,87.0,percentage,ones,,MediSight_Q2_2025.pdf,1,0.95,Expansion ARR as % of Total ARR 87%
-MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,headcount,Total Headcount,121.0,count,ones,,MediSight_Q2_2025.pdf,1,0.95,Total Headcount 121
-MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,other,Capitalized development costs,0.5,currency,millions,USD,MediSight_Q2_2025.pdf,1,0.95,Capitalized development costs in Q2 2025 amounted to 0.5M
+MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,arr,ARR Growth (YoY),31.0,percentage,unknown,,MediSight_Q2_2025.pdf,1,0.95,ARR Growth (YoY) 31%
+MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,arr,Expansion ARR as % of Total ARR,87.0,percentage,unknown,,MediSight_Q2_2025.pdf,1,0.95,Expansion ARR as % of Total ARR 87%
+MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,headcount,Total Headcount,121.0,count,unknown,,MediSight_Q2_2025.pdf,1,0.95,Total Headcount 121
+MediSight,MediSight Data Platform Inc.,,2025,Q2,quarter,cash_balance,Capitalized development costs,0.5,currency,millions,USD,MediSight_Q2_2025.pdf,1,0.95,Capitalized development costs in Q2 2025 amounted to 0.5M
 MediSight,MediSight Data Platform Inc.,,2024,Q4,quarter,revenue,Recognized Revenue,6.1,currency,millions,USD,MediSight_Q4_2024.pdf,1,0.95,Recognized Revenue 6.1M
 MediSight,MediSight Data Platform Inc.,,2024,Q4,quarter,gross_margin,Gross Margin,75.0,percentage,ones,,MediSight_Q4_2024.pdf,1,0.95,Gross Margin 75%
 MediSight,MediSight Data Platform Inc.,,2024,Q4,quarter,arr,Contracted ARR (end of period),24.5,currency,millions,USD,MediSight_Q4_2024.pdf,1,0.95,Contracted ARR (end of period) 24.5M
@@ -133,21 +150,21 @@ NovaCloud,NovaCloud Analytics Inc.,,2025,Q1,quarter,monthly_burn,Monthly Net Bur
 NovaCloud,NovaCloud Analytics Inc.,,2025,Q1,quarter,headcount,Total Headcount,135.0,count,unknown,,NovaCloud_Q1_2025.pdf,1,0.95,Total Headcount 135
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,revenue,Total Billings (USD),5.8,currency,millions,USD,NovaCloud_Q2_2024.pdf,1,0.95,Total Billings (USD) $5.8M
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,arr,End-of-Period ARR,24.1,currency,millions,USD,NovaCloud_Q2_2024.pdf,1,0.95,End-of-Period ARR $24.1M
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,gross_margin,Gross Margin,74.0,percentage,ones,,NovaCloud_Q2_2024.pdf,1,0.95,Gross Margin 74%
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,net_retention,Net Dollar Retention (LTM),115.0,percentage,ones,,NovaCloud_Q2_2024.pdf,1,0.95,Net Dollar Retention (LTM) 115%
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,logo_churn,Logo Churn Rate (LTM),7.8,percentage,ones,,NovaCloud_Q2_2024.pdf,1,0.95,Logo Churn Rate (LTM) 7.8%
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,gross_margin,Gross Margin,74.0,percentage,unknown,,NovaCloud_Q2_2024.pdf,1,0.95,Gross Margin 74%
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,net_retention,Net Dollar Retention (LTM),115.0,percentage,unknown,,NovaCloud_Q2_2024.pdf,1,0.95,Net Dollar Retention (LTM) 115%
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,logo_churn,Logo Churn Rate (LTM),7.8,percentage,unknown,,NovaCloud_Q2_2024.pdf,1,0.95,Logo Churn Rate (LTM) 7.8%
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,cash_balance,Cash Balance,29.5,currency,millions,USD,NovaCloud_Q2_2024.pdf,1,0.95,Cash Balance $29.5M
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,monthly_burn,Monthly Net Burn,-0.98,currency,millions,USD,NovaCloud_Q2_2024.pdf,1,0.95,Monthly Net Burn ($0.98M)
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,headcount,Total Headcount,112.0,count,ones,,NovaCloud_Q2_2024.pdf,1,0.95,Total Headcount 112
-NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,revenue,Recognized Revenue,8.4,currency,millions,USD,NovaCloud_Q2_2025.pdf,1,0.95,Recognized Revenue (USD) $8.4M
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,monthly_burn,Monthly Net Burn,0.98,currency,millions,USD,NovaCloud_Q2_2024.pdf,1,0.95,Monthly Net Burn ($0.98M)
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q2,quarter,headcount,Total Headcount,112.0,count,unknown,,NovaCloud_Q2_2024.pdf,1,0.95,Total Headcount 112
+NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,revenue,Recognized Revenue (USD),8.4,currency,millions,USD,NovaCloud_Q2_2025.pdf,1,0.95,Recognized Revenue (USD) $8.4M
 NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,arr,ARR (End of Period),34.2,currency,millions,USD,NovaCloud_Q2_2025.pdf,1,0.95,ARR (End of Period) $34.2M
-NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,78.0,percentage,unknown,,NovaCloud_Q2_2025.pdf,1,0.95,Gross Margin 78%
-NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,net_retention,Net Dollar Retention,123.0,percentage,unknown,,NovaCloud_Q2_2025.pdf,1,0.95,Net Dollar Retention 123%
-NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,logo_churn,Logo Churn (LTM),5.8,percentage,unknown,,NovaCloud_Q2_2025.pdf,1,0.95,Logo Churn (LTM) 5.8%
+NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,gross_margin,Gross Margin,78.0,percentage,ones,,NovaCloud_Q2_2025.pdf,1,0.95,Gross Margin 78%
+NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,net_retention,Net Dollar Retention,123.0,percentage,ones,,NovaCloud_Q2_2025.pdf,1,0.95,Net Dollar Retention 123%
+NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,logo_churn,Logo Churn (LTM),5.8,percentage,ones,,NovaCloud_Q2_2025.pdf,1,0.95,Logo Churn (LTM) 5.8%
 NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,cash_balance,Cash Balance,19.6,currency,millions,USD,NovaCloud_Q2_2025.pdf,1,0.95,Cash Balance $19.6M
 NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,monthly_burn,Monthly Net Burn,-0.75,currency,millions,USD,NovaCloud_Q2_2025.pdf,1,0.95,Monthly Net Burn ($0.75M)
-NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,headcount,Total Headcount,142.0,count,unknown,,NovaCloud_Q2_2025.pdf,1,0.95,Total Headcount 142
-NovaCloud,NovaCloud Analytics Inc.,,2024,Q3,quarter,revenue,Recognized Revenue (USD),6.5,currency,millions,USD,NovaCloud_Q3_2024.pdf,1,0.95,Recognized Revenue (USD) $6.5M
+NovaCloud,NovaCloud Analytics Inc.,,2025,Q2,quarter,headcount,Total Headcount,142.0,count,ones,,NovaCloud_Q2_2025.pdf,1,0.95,Total Headcount 142
+NovaCloud,NovaCloud Analytics Inc.,,2024,Q3,quarter,revenue,Recognized Revenue,6.5,currency,millions,USD,NovaCloud_Q3_2024.pdf,1,0.95,Recognized Revenue (USD) $6.5M
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q3,quarter,arr,End-of-Period ARR,26.8,currency,millions,USD,NovaCloud_Q3_2024.pdf,1,0.95,End-of-Period ARR $26.8M
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q3,quarter,gross_margin,Gross Margin,75.0,percentage,ones,,NovaCloud_Q3_2024.pdf,1,0.95,Gross Margin 75%
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q3,quarter,net_retention,Net Dollar Retention (LTM),117.0,percentage,ones,,NovaCloud_Q3_2024.pdf,1,0.95,Net Dollar Retention (LTM) 117%
@@ -163,24 +180,25 @@ NovaCloud,NovaCloud Analytics Inc.,,2024,Q4,quarter,monthly_burn,Monthly Net Bur
 NovaCloud,NovaCloud Analytics Inc.,,2024,Q4,quarter,headcount,Total Headcount,128.0,count,ones,,NovaCloud_Q4_2024.pdf,1,0.95,Total Headcount 128
 PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,revenue,Quarterly Revenue,4.7,currency,millions,GBP,PeopleFlow_Q1_2025.pdf,1,0.95,Quarterly Revenue 4.7M
 PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,arr,Subscription ARR (end of period),19.8,currency,millions,GBP,PeopleFlow_Q1_2025.pdf,1,0.95,Subscription ARR (end of period) 19.8M
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,gross_margin,Gross Margin,74.0,percentage,ones,,PeopleFlow_Q1_2025.pdf,1,0.95,Gross Margin 74%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,net_retention,Net Pound Retention – NPR (LTM),117.0,percentage,ones,,PeopleFlow_Q1_2025.pdf,1,0.95,Net Pound Retention – NPR (LTM) 117%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,logo_churn,Annual Logo Churn,4.3,percentage,ones,,PeopleFlow_Q1_2025.pdf,1,0.95,Annual Logo Churn 4.3%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,paying_entities,Active Subscriptions,395.0,count,ones,,PeopleFlow_Q1_2025.pdf,1,0.95,Active Subscriptions 395
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,headcount,Total Headcount,92.0,count,ones,,PeopleFlow_Q1_2025.pdf,1,0.95,Total Headcount 92
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,gross_margin,Gross Margin,74.0,percentage,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Gross Margin 74%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,net_retention,Net Pound Retention – NPR (LTM),117.0,percentage,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Net Pound Retention – NPR (LTM) 117%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,logo_churn,Annual Logo Churn,4.3,percentage,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Annual Logo Churn 4.3%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,paying_entities,Active Subscriptions,395.0,count,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Active Subscriptions 395
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,other,Avg. Seats per Customer,144.0,count,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Avg. Seats per Customer 144
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q1,quarter,headcount,Total Headcount,92.0,count,unknown,,PeopleFlow_Q1_2025.pdf,1,0.95,Total Headcount 92
 PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,revenue,Quarterly Revenue,5.1,currency,millions,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Quarterly Revenue 5.1M
 PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,arr,Subscription ARR (end of period),21.4,currency,millions,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Subscription ARR (end of period) 21.4M
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,net_retention,Net Dollar Retention (LTM),118.0,percentage,unknown,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Net Dollar Retention (LTM) 118%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,logo_churn,Annual Logo Churn,4.2,percentage,unknown,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Annual Logo Churn 4.2%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,paying_entities,Paying Customer Logos,412.0,count,unknown,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Paying Customer Logos 412
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,headcount,Total Headcount,96.0,count,unknown,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Total Headcount 96
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,revenue,Quarterly Revenue,4.4,currency,millions,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Quarterly Revenue 4.4M
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,arr,Subscription ARR (end of period),18.3,currency,millions,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Subscription ARR (end of period) 18.3M
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,gross_margin,Gross Margin,74.0,percentage,unknown,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Gross Margin 74%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,net_retention,Net Dollar Retention (LTM),116.0,percentage,unknown,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Net Dollar Retention (LTM) 116%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,logo_churn,Annual Logo Churn,4.5,percentage,unknown,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Annual Logo Churn 4.5%
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,enterprise_logos,Paying Customer Logos,379.0,count,unknown,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Paying Customer Logos 379
-PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,headcount,Total Headcount,88.0,count,unknown,GBP,PeopleFlow_Q4_2024.pdf,1,1.0,Total Headcount 88
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,net_retention,Net Dollar Retention (LTM),118.0,percentage,ones,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Net Dollar Retention (LTM) 118%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,logo_churn,Annual Logo Churn,4.2,percentage,ones,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Annual Logo Churn 4.2%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,paying_entities,Paying Customer Logos,412.0,count,ones,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Paying Customer Logos 412
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2025,Q2,quarter,headcount,Total Headcount,96.0,count,ones,GBP,PeopleFlow_Q2_2025.pdf,1,0.95,Total Headcount 96
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,revenue,Quarterly Revenue,4.4,currency,millions,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Quarterly Revenue 4.4M
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,arr,Subscription ARR (end of period),18.3,currency,millions,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Subscription ARR (end of period) 18.3M
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,gross_margin,Gross Margin,74.0,percentage,ones,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Gross Margin 74%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,net_retention,Net Dollar Retention (LTM),116.0,percentage,ones,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Net Dollar Retention (LTM) 116%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,logo_churn,Annual Logo Churn,4.5,percentage,ones,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Annual Logo Churn 4.5%
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,enterprise_logos,Paying Customer Logos,379.0,count,ones,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Paying Customer Logos 379
+PeopleFlow,PeopleFlow HR Systems Ltd.,,2024,Q4,quarter,headcount,Total Headcount,88.0,count,ones,GBP,PeopleFlow_Q4_2024.pdf,1,0.95,Total Headcount 88
 TalentVault,TalentVault Inc.,,2025,Q2,quarter,arr,Contracted ARR,22.4,currency,millions,USD,TalentVault_Q2_2025.pdf,1,0.95,Contracted ARR $22.4M $20.8M
 TalentVault,TalentVault Inc.,,2025,Q1,quarter,arr,Contracted ARR,20.8,currency,millions,USD,TalentVault_Q2_2025.pdf,1,0.95,Contracted ARR $22.4M $20.8M
 TalentVault,TalentVault Inc.,,2025,Q2,quarter,revenue,Quarterly Revenue (recognized),5.5,currency,millions,USD,TalentVault_Q2_2025.pdf,1,0.95,Quarterly Revenue (recognized) $5.5M $5.1M
